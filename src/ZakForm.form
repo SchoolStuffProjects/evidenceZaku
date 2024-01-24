@@ -88,7 +88,7 @@
           <text value="Ano"/>
         </properties>
       </component>
-      <component id="d33ea" class="javax.swing.JRadioButton" binding="prvniRB">
+      <component id="d33ea" class="javax.swing.JRadioButton" binding="RB1">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -96,7 +96,7 @@
           <text value="První"/>
         </properties>
       </component>
-      <component id="ead77" class="javax.swing.JRadioButton" binding="druhyRB">
+      <component id="ead77" class="javax.swing.JRadioButton" binding="RB2">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -125,7 +125,7 @@
           <text value="Ulož"/>
         </properties>
       </component>
-      <component id="3b2fe" class="javax.swing.JRadioButton" binding="tretiRB">
+      <component id="3b2fe" class="javax.swing.JRadioButton" binding="RB3">
         <constraints>
           <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -133,7 +133,7 @@
           <text value="Třetí"/>
         </properties>
       </component>
-      <component id="4a237" class="javax.swing.JRadioButton" binding="ctvrtyRB">
+      <component id="4a237" class="javax.swing.JRadioButton" binding="RB4">
         <constraints>
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>

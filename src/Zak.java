@@ -7,17 +7,13 @@ public class Zak {
     private LocalDate datumNarozeni;
     private boolean souhlasGDPR;
     private int rocnik;
-    private LocalDate datumNakupu;
-    private BigDecimal cena;
 
-    public Zak(String jmeno, String prijmeni, LocalDate datumNarozeni, boolean souhlasGDPR, int rocnik, LocalDate datumNakupu, BigDecimal cena) {
+    public Zak(String jmeno, String prijmeni, LocalDate datumNarozeni, boolean souhlasGDPR, int rocnik) {
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
         this.datumNarozeni = datumNarozeni;
         this.souhlasGDPR = souhlasGDPR;
         this.rocnik = rocnik;
-        this.datumNakupu = datumNakupu;
-        this.cena = cena;
     }
 
     public String getJmeno() {
@@ -58,21 +54,5 @@ public class Zak {
 
     public void setRocnik(int rocnik) {
         this.rocnik = rocnik;
-    }
-
-    public LocalDate getDatumNakupu() {
-        return datumNakupu;
-    }
-
-    public void setDatumNakupu(LocalDate datumNakupu) {
-        this.datumNakupu = datumNakupu;
-    }
-
-    public BigDecimal getCena() {
-        return cena;
-    }
-
-    public void setCena(BigDecimal cena) {
-        this.cena = cena;
     }
 }
