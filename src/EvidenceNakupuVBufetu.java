@@ -8,7 +8,6 @@ public class EvidenceNakupuVBufetu {
     public List<NakupVBufetu> ziskejSeznamNakupu(){
         return seznamNakupu;
     }
-
     public EvidenceNakupuVBufetu(){
         NakupVBufetu n1 = new NakupVBufetu(LocalDate.of(1570, 1, 1), BigDecimal.valueOf(7.27));
         NakupVBufetu n2 = new NakupVBufetu(LocalDate.of(1572, 1, 1), BigDecimal.valueOf(690));

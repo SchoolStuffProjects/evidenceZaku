@@ -9,7 +9,6 @@ public class EvidenceZaku {
     public List<Zak> ziskejSeznamZaku(){
         return seznamZaku;
     }
-
     public EvidenceZaku(){
         Zak z1 = new Zak("Pavel", "Dobeš", LocalDate.of(1555, 1, 1), Boolean.TRUE, 3);
         seznamZaku.add(z1);

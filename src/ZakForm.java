@@ -24,7 +24,6 @@ public class ZakForm extends JFrame {
     private JTextArea nakupyBufet;
     private JButton saveBtn;
 
-
     public ZakForm() {
             EvidenceZaku evidenceZaku = new EvidenceZaku();
             List<Zak> seznamZaku = evidenceZaku.ziskejSeznamZaku();
@@ -45,7 +44,6 @@ public class ZakForm extends JFrame {
 
             });
         }
-
     public void displayZak(Zak zak) {
         txtJmeno.setText(zak.getJmeno());
         txtPrijmeni.setText(zak.getPrijmeni());
