@@ -6,7 +6,7 @@ import java.util.prefs.Preferences;
 public class EvidenceZaku {
     private List<Zak> seznamZaku = new ArrayList<>();
 
-    public List<Zak> ziskejSeznamZaku(){
+    public List<Zak> ziskejSeznamZaku() {
         return seznamZaku;
     }
     public EvidenceZaku() {

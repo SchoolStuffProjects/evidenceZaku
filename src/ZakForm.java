@@ -92,6 +92,7 @@ public class ZakForm extends JFrame {
         z.setContentPane(z.panel);
         z.setSize(500, 700);
         z.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        z.setTitle("Evidence žáků");
         z.setVisible(true);
     }
 }
