@@ -80,8 +80,7 @@ public class ZakForm extends JFrame {
         StringBuilder nakupyText = new StringBuilder();
 
         for (NakupVBufetu nakupVBufetu : seznamNakupu) {
-            nakupyText.append("Datum: ").append(nakupVBufetu.getDatumTransakce()).append(" ")
-                    .append("Cena: ").append(nakupVBufetu.getCena()).append("\n");
+            nakupyText.append("Datum: ").append(nakupVBufetu.getDatumTransakce()).append(" ").append("Cena: ").append(nakupVBufetu.getCena()).append("\n");
         }
 
         nakupyBufet.setText(nakupyText.toString());
