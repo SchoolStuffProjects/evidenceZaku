@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ZakForm extends JFrame {
@@ -19,7 +20,7 @@ public class ZakForm extends JFrame {
     private JPanel panel;
     private JTextArea nakupyBufet;
     private JButton saveBtn;
-
+    private final int[] selectedRocnik = {1};
     public ZakForm() {
             EvidenceZaku evidenceZaku = new EvidenceZaku();
             List<Zak> seznamZaku = evidenceZaku.ziskejSeznamZaku();
@@ -32,13 +33,34 @@ public class ZakForm extends JFrame {
             btnGroup.add(RB3);
             btnGroup.add(RB4);
 
+            RB1.addItemListener(e -> handleRadioButtonClick(1));
+            RB2.addItemListener(e -> handleRadioButtonClick(2));
+            RB3.addItemListener(e -> handleRadioButtonClick(3));
+            RB4.addItemListener(e -> handleRadioButtonClick(4));
+
             int index = 0;
             displayZak(seznamZaku.get(index));
             displayNakupy(seznamNakupu);
 
             saveBtn.addActionListener(e -> {
+                int selectedIndex = 0;
 
+                Zak selectedZak = seznamZaku.get(selectedIndex);
+                selectedZak.setJmeno(txtJmeno.getText());
+                selectedZak.setPrijmeni(txtPrijmeni.getText());
+                selectedZak.setDatumNarozeni(LocalDate.parse(txtDatumNarozeni.getText()));
+                selectedZak.setSouhlasGDPR(CheckBox.isSelected());
+                selectedZak.setRocnik(selectedRocnik[0]);
+
+                evidenceZaku.ulozZaky(selectedZak);
+                displayZak(selectedZak);
+
+                JOptionPane.showMessageDialog(this, "Data byly uloženy", "Paráda", JOptionPane.INFORMATION_MESSAGE);
             });
+        }
+
+        private void handleRadioButtonClick(int rocnik) {
+            selectedRocnik[0] = rocnik;
         }
     public void displayZak(Zak zak) {
         txtJmeno.setText(zak.getJmeno());
@@ -54,7 +76,6 @@ public class ZakForm extends JFrame {
             case 4 -> RB4.setSelected(true);
         }
     }
-
     public void displayNakupy(List<NakupVBufetu> seznamNakupu) {
         StringBuilder nakupyText = new StringBuilder();
 
